@@ -1,0 +1,45 @@
+class Animal:
+    def __init__(nome, idade, especie, cor, som):
+        self.nome = nome
+        self.idade = idade
+        self.especie = especie
+        self.cor = cor
+        self.som = som
+      
+    def emitir_som(self):
+        print('O ' + self.nome + 'esta emitindo o som ' + self.som)
+
+    def mudar_cor(nova_cor):
+        self.cor = nova_cor
+
+
+class Elefante(Animal):
+    def __init__(self, nome, idade, especie, cor, som,):
+        super().__init__(nome, idade, especie, cor, som)
+        self.__tamanho = tamanho
+
+    def trombar(self):
+        print('O som do elefante e: ' + str(self.som))
+
+    def mudar_tamanho(novo_tamanho):
+        self.tamanho = novo_tamanho
+
+print("Digite o nome, idade, especie, cor e tamanho do elefante: ")
+nome = input()
+idade = input()
+especie = input()
+cor = input()
+tamanho = input()
+
+if especie == "Africano":
+    if idade < 10:
+        tamanho = "pequeno"
+        som = "Paaah"
+    else:
+        tamanho = "grande"
+        som = "PAHHHHHH"
+
+elefante = Elefante(nome, idade, especie, cor, som)
+
+print("O novo tamanho do elefante é:" + elefante.tamanho)
+print("O novo som do elefante é:" + elefante.som)
